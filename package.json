@@ -1,0 +1,11 @@
+{
+  "name": "am-prem",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "socks-proxy-agent": "^8.0.4"
+  }
+}
