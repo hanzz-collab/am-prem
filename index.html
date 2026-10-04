@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="AM Prem — Alight Motion Premium gratis & instan." />
+<title>Alight Motion Premium - Puttraa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="halftone"></div>
+  <div class="burst"></div>
+
+  <main class="card">
+    <!-- HEADER (avatar + title, selalu tampil) -->
+    <div class="avatar-wrap">
+      <div class="avatar">💥</div>
+      <div class="star s1">★</div>
+      <div class="star s2">✦</div>
+      <div class="star s3">★</div>
+    </div>
+
+    <h1 class="title">AM PREM</h1>
+    <p class="tagline">Alight Motion Premium — Gratis &amp; Instan!</p>
+
+    <!-- STEP INDICATOR -->
+    <div class="steps" id="steps">
+      <div class="step active" data-step="1">
+        <div class="step-num">1</div>
+        <div class="step-label">Kirim</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="2">
+        <div class="step-num">2</div>
+        <div class="step-label">Verifikasi</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="3">
+        <div class="step-num">3</div>
+        <div class="step-label">Selesai</div>
+      </div>
+    </div>
+
+    <!-- ===================== STEP 1: KIRIM ===================== -->
+    <section id="step1" class="step-panel active">
+      <div class="panel-header">
+        <h2 class="panel-title">📧 KIRIM MAGIC LINK</h2>
+        <p class="panel-desc">Masukkan email target, link verifikasi bakal dikirim ke inbox-nya.</p>
+      </div>
+
+      <div class="form-box">
+        <label class="comic-label" for="email">📧 EMAIL TARGET</label>
+        <input id="email" type="email" placeholder="putra@gmail.com" class="comic-input" autocomplete="email" />
+
+        <button id="btnSend" class="comic-btn btn-send" type="button">
+          <span>KIRIM MAGIC LINK</span>
+        </button>
+      </div>
+
+      <div id="result1" class="result hidden" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- ===================== STEP 2: VERIFIKASI ===================== -->
+    <section id="step2" class="step-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">🔗 VERIFIKASI</h2>
+        <p class="panel-desc">Buka email <b id="emailPreview">kamu (cek di folder spam)</b>, copy link verifikasi, paste di bawah.</p>
+      </div>
+
+      <div class="form-box">
+        <label class="comic-label" for="link">🔗 LINK VERIFIKASI</label>
+        <input id="link" type="text" placeholder="Paste link dari email di sini..." class="comic-input" autocomplete="off" />
+
+        <button id="btnVerify" class="comic-btn btn-verify" type="button">
+          <span>VERIFIKASI SEKARANG</span>
+        </button>
+
+        <button id="btnBack" class="comic-btn btn-back" type="button">
+          <span>← GANTI EMAIL</span>
+        </button>
+      </div>
+
+      <div id="result2" class="result hidden" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- ===================== STEP 3: SUKSES ===================== -->
+    <section id="step3" class="step-panel">
+      <div class="success-burst">
+        <div class="success-icon">🎉</div>
+      </div>
+
+      <h2 class="success-title">PREMIUM AKTIF!</h2>
+      <p class="success-sub">Selamat! Akun kamu udah jadi Alight Motion Premium.</p>
+
+      <div class="info-grid">
+        <div class="info-row">
+          <span class="info-icon">📧</span>
+          <div class="info-text">
+            <span class="info-label">EMAIL TARGET</span>
+            <span class="info-value" id="finalEmail">-</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">👑</span>
+          <div class="info-text">
+            <span class="info-label">STATUS</span>
+            <span class="info-value premium-badge">PREMIUM</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">⏳</span>
+          <div class="info-text">
+            <span class="info-label">DURASI</span>
+            <span class="info-value">1 TAHUN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefit-box">
+        <h3 class="benefit-title">✨ BENEFIT KAMU</h3>
+        <ul class="benefit-list">
+          <li><span class="check">✓</span> Hapus Watermark</li>
+          <li><span class="check">✓</span> Unlock Preset 5MB+</li>
+          <li><span class="check">✓</span> Unlock Semua Fitur</li>
+        </ul>
+      </div>
+
+      <button id="btnRestart" class="comic-btn btn-restart" type="button">
+        <span>🔄 MULAI LAGI</span>
+      </button>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 AM PREM · by <b>puttraa</b></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
